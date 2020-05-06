@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppHeader from './components/appHeader';
+import AppHeader from './components/AppHeader';
 import SearchBlock from './components/SearchBlock';
 import TodoList from './components/TodoList';
 
+
 const App = () => {
+
+  const todoData = [
+    { label: 'Learn HTML', important: false, id: 1 },
+    { label: 'Learn JS', important: true, id: 2 },
+    { label: 'Learn REACT', important: false, id: 3 }
+  ]
+
   return (
     <div>
       <AppHeader />
       <SearchBlock />
-      <TodoList />
+      <TodoList todoItems={todoData} />
     </div>
   );
 }
